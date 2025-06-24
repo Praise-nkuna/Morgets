@@ -67,7 +67,7 @@ try {
 
     //Recipients
 $mail->addAddress('info@Morgetsbookshop.co.za'); // Your law bookshop's email
-$mail->setFrom('info@.co.za', 'Morgets Bookshop');
+$mail->setFrom('info@Morgetsbookshop.co.za', 'Morgets Bookshop');
 $mail->addAddress('info@Morgetsbookshop.co.za'); // Your law bookshop's email
 $mail->addReplyTo($email, $name);
 
