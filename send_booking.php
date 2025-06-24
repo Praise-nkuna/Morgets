@@ -81,7 +81,7 @@ $mail->addReplyTo($email, $name);
     // Send confirmation to client
     $mail->clearAddresses();
     $mail->addAddress($email);
-    $mail->Subject = "Consultation Booking Confirmation";
+    $mail->Subject = "Service Booking Confirmation";
     $mail->Body = "Dear $name,\n\nThank you for booking a service. We will contact you soon.\n\nBest regards,\nMorgets Booshop";
     $mail->send();
 
