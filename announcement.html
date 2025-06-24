@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Morgets Bookshop - Announcements</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            background-image: url('book.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .overlay-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 10px;
+            margin-top: 80px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #00264d;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        h1, h2 {
+            color: #004080;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .facebook-section a {
+            color: #1877f2;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+            .facebook-section a:hover {
+                text-decoration: underline;
+            }
+
+        .holiday-greeting {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+            .holiday-greeting.today {
+                background-color: #ffcc00;
+                color: #004080;
+            }
+
+        .no-upcoming {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 30px;
+        }
+
+        .print-button {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #004080;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.jpg" alt="Logo" width="40" height="40" class="me-2 rounded-circle" />
+                Morgets Bookshop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.php">Book Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="announcement.html">Announcements</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1">
+        <div class="container overlay-box">
+            <h1>Stay Connected with Us!</h1>
+
+            <section class="facebook-section">
+                <p>
+                    Follow <strong>Morgets Bookshop</strong> on Facebook for the latest updates, tips,
+                    and community news:
+                </p>
+                <p>
+                    <a href="https://www.facebook.com/profile.php?id=100089129395370" target="_blank" rel="noopener noreferrer">
+                        Facebook: @Praise Nkuna
+                    </a>
+                </p>
+
+                <h2 style="font-size: 1.25rem;">Meet Our Founder</h2>
+                <p>
+                    Connect with <strong>Praise Nkuna</strong> on LinkedIn:
+                </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/praise-nkuna-341378127/" target="_blank" rel="noopener noreferrer" style="color:#0A66C2; font-weight:600;">
+                        🔗 LinkedIn Profile
+                    </a>
+                </p>
+
+                <p>Like, share, and engage with our posts to stay informed and connected.</p>
+            </section>
+
+            <!-- News & Events -->
+            <section class="text-start mt-5">
+                <h2>📢 Latest News & Events</h2>
+                <ul style="font-size: 1.1rem;">
+                    <li><strong>📚 Winter Book Fair:</strong> Visit our stall at Olieven Mall on July 5th–7th!</li>
+                    <li><strong>📝 Essay Competition:</strong> Submit by August 15 for a chance to win R500 book voucher.</li>
+                    <li><strong>📦 New Arrivals:</strong> Fresh academic stock just in — grab your study guides today!</li>
+                </ul>
+            </section>
+
+            <!-- Upcoming Holidays -->
+            <section id="upcoming-holidays" class="mt-5">
+                <h2>🎉 Upcoming Holidays & Greetings</h2>
+                <div id="holiday-list"></div>
+            </section>
+
+            <!-- Print/Download Button -->
+            <div class="print-button text-center">
+                <button class="btn btn-outline-dark" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print or Save as PDF
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <p class="mb-0">
+            &copy; 2025 Morgets Bookshop. All rights reserved.<br />
+            Created by
+            <a href="https://github.com/Praise-nkuna" target="_blank">Praise Nkuna</a>
+        </p>
+        <div style="margin-top: 10px;">
+            <a href="https://www.linkedin.com/in/praise-nkuna-341378127/" target="_blank" style="margin-right: 15px;">
+                <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100089129395370" target="_blank">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Holiday Script -->
+    <script>
+        const holidays = [
+            { month: 6, day: 16, name: "Youth Day", message: "Wishing all our clients and community a meaningful Youth Day filled with hope and empowerment." },
+            { month: 12, day: 16, name: "Day of Reconciliation", message: "May this day inspire unity, healing, and peace for all South Africans." },
+            { month: 12, day: 25, name: "Christmas Day", message: "Warm wishes for a joyous Christmas filled with love, laughter, and good company." },
+            { month: 1, day: 1, name: "New Year's Day", message: "Happy New Year! May the coming year bring you success, health, and happiness." }
+        ];
+
+        function getUpcomingHolidays(daysAhead = 30) {
+            const today = new Date();
+            const currentYear = today.getFullYear();
+            return holidays
+                .map(h => {
+                    let date = new Date(currentYear, h.month - 1, h.day);
+                    if (date < today) date.setFullYear(currentYear + 1);
+                    const daysAway = Math.ceil((date - today) / (1000 * 60 * 60 * 24));
+                    return { ...h, date, daysAway };
+                })
+                .filter(h => h.daysAway >= 0 && h.daysAway <= daysAhead)
+                .sort((a, b) => a.date - b.date);
+        }
+
+        function formatDate(date) {
+            return date.toLocaleDateString(undefined, { month: 'long', day: 'numeric' });
+        }
+
+        function renderHolidays() {
+            const list = document.getElementById("holiday-list");
+            const upcoming = getUpcomingHolidays();
+            list.innerHTML = "";
+
+            if (upcoming.length === 0) {
+                list.innerHTML = `<p class="no-upcoming">No upcoming holidays in the next 30 days. Please check back later!</p>`;
+                return;
+            }
+
+            const todayStr = new Date().toDateString();
+            upcoming.forEach(h => {
+                const isToday = h.date.toDateString() === todayStr;
+                const div = document.createElement("div");
+                div.className = `holiday-greeting${isToday ? " today" : ""}`;
+                div.innerHTML = isToday
+                    ? `🎉 <strong>Today is ${h.name}!</strong><br/>${h.message}`
+                    : `<strong>${h.name} – ${formatDate(h.date)}</strong><br/>${h.message}<br/><em>(${h.daysAway} day${h.daysAway > 1 ? "s" : ""} away)</em>`;
+                list.appendChild(div);
+            });
+        }
+
+        window.onload = renderHolidays;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
