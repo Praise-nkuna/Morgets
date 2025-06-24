@@ -66,9 +66,10 @@ try {
     $mail->Port = $smtpPort;
 
     //Recipients
-    $mail->setFrom('info@thateloattorneys.co.za', 'Thatelo Attorneys');
-    $mail->addAddress('info@thateloattorneys.co.za'); // Your law firm's email
-    $mail->addReplyTo($email, $name);
+$mail->addAddress('info@Morgetsbookshop.co.za'); // Your law bookshop's email
+$mail->setFrom('info@.co.za', 'Morgets Bookshop');
+$mail->addAddress('info@Morgetsbookshop.co.za'); // Your law bookshop's email
+$mail->addReplyTo($email, $name);
 
     // Content
     $mail->isHTML(false);
@@ -81,7 +82,7 @@ try {
     $mail->clearAddresses();
     $mail->addAddress($email);
     $mail->Subject = "Consultation Booking Confirmation";
-    $mail->Body = "Dear $name,\n\nThank you for booking a consultation. We will contact you soon.\n\nBest regards,\nThatelo Attorneys";
+    $mail->Body = "Dear $name,\n\nThank you for booking a service. We will contact you soon.\n\nBest regards,\nMorgets Booshop";
     $mail->send();
 
     echo json_encode(['success' => true, 'message' => 'Booking submitted successfully!']);
